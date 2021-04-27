@@ -2,3 +2,35 @@
   display: flex;
   justify-content: space-between;
 }
+
+// btn grey
+@mixin btn-grey{
+  padding: 16px 38px;
+  background-color: #31312f;
+  letter-spacing: 3px;
+  span{
+    color: #ffff;
+  }
+  &:hover{
+    background-color: #f9d03f;
+    span{
+      color: black;
+    }
+  }
+}
+
+// btn orange
+@mixin btn-lightOrange{
+  padding: 16px 38px;
+  background-color: #f9d03f;
+  letter-spacing: 3px;
+  span{
+    color: black;
+  }
+  &:hover{
+    background-color: #31312f;
+    span{
+      color: #ffff;
+    }
+  }
+}

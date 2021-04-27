@@ -3,6 +3,7 @@
   <head>
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <!-- font awesame -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- style -->
@@ -25,12 +26,46 @@
             <ul>
               <li v-for='item in navBar'>{{item.nav}}</li>
             </ul>
-            <button type="button" name="button">GET QUOTE</button>
+            <a href="#"> <span href="#">GET QUOTE</span> </a>
           </nav>
         </div>
       </header>
 
       <main>
+
+        <section class="jumbotron">
+          <img :src="jumbotron">
+          <div class="textJumbotro">
+            <h1>BUILDING INSPIRING SPACES</h1>
+            <p>We Build Inspiring Residential & Commercial Spaces</p>
+            <div class="container-btn">
+              <a href="#"> <span>EXPLORE RECENT WORK</span> </a>
+              <a href="#"> <span>GET A QUOTE TODAY</span> </a>
+            </div>
+          </div>
+          <div class="post">
+            <p>Do You Have A Construction Project We Can Help With?</p>
+            <a href="#"> <span>GET A FREE QUOTE</span> </a>
+          </div>
+        </section>
+
+        <section class="specialist">
+          <div class="container">
+            <p>
+              Specialists In Modern Construction
+              <i id="border"></i>
+            </p>
+            <span class="info-sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</span>
+            <div class="container-cardSpecialist">
+              <div class="cardSpecialist" v-for='card in cardSpecialist'>
+                <i :class="card.icon"></i>
+                <span>{{card.title}}</span>
+                <p>{{card.front}}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
       </main>
 

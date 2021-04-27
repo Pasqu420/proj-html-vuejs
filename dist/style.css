@@ -19,10 +19,12 @@ a {
 
 div#app header {
   position: fixed;
+  z-index: 100;
   top: 0;
   width: 100%;
   height: 130px;
   background-color: #ffff;
+  word-spacing: 4px;
 }
 div#app header .navBar {
   width: 88%;
@@ -50,16 +52,181 @@ div#app header .navBar nav ul {
 div#app header .navBar nav ul li {
   margin-right: 50px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 div#app header .navBar nav ul li:first-child {
   color: #fed455;
 }
-div#app header .navBar nav button {
-  width: 160px;
-  height: 45px;
-  align-items: center;
-  border: none;
-  font-size: 0.95rem;
+div#app header .navBar nav a {
+  padding: 13px 35px;
   background-color: #fed23f;
+  font-size: 0.9rem;
+  transition: background-color 0.4s;
+}
+div#app header .navBar nav a:hover {
+  background-color: #1e1e1e;
+}
+div#app header .navBar nav a:hover span {
+  color: #ffff;
+}
+div#app header .navBar nav a span {
+  color: black;
+}
+div#app main {
+  width: 100%;
+  height: calc(100vh - 130px);
+  padding-top: 130px;
+}
+div#app main .jumbotron {
+  position: relative;
+}
+div#app main .jumbotron img {
+  width: 100%;
+  height: calc(100vh - 130px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div#app main .jumbotron .textJumbotro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  word-spacing: 3px;
+}
+div#app main .jumbotron .textJumbotro h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.7rem;
+  font-weight: bold;
+  color: white;
+}
+div#app main .jumbotron .textJumbotro p {
+  font-size: 1.6rem;
+  color: #fed455;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+div#app main .jumbotron .textJumbotro .container-btn {
+  width: 670px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+div#app main .jumbotron .textJumbotro .container-btn a {
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+div#app main .jumbotron .textJumbotro .container-btn a span {
+  font-size: 1.05rem;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:first-child {
+  padding: 16px 38px;
+  background-color: #31312f;
+  letter-spacing: 3px;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:first-child span {
+  color: #ffff;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:first-child:hover {
+  background-color: #f9d03f;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:first-child:hover span {
+  color: black;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:last-child {
+  padding: 16px 38px;
+  background-color: #f9d03f;
+  letter-spacing: 3px;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:last-child span {
+  color: black;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:last-child:hover {
+  background-color: #31312f;
+}
+div#app main .jumbotron .textJumbotro .container-btn a:last-child:hover span {
+  color: #ffff;
+}
+div#app main .jumbotron .post {
+  height: 130px;
+  background-color: #f9d03f;
+  margin-top: -3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div#app main .jumbotron .post a {
+  padding: 16px 38px;
+  background-color: #31312f;
+  letter-spacing: 3px;
+  position: relative;
+  top: 55px;
+  border: 1px solid #ffff;
+}
+div#app main .jumbotron .post a span {
+  color: #ffff;
+}
+div#app main .jumbotron .post a:hover {
+  background-color: #f9d03f;
+}
+div#app main .jumbotron .post a:hover span {
+  color: black;
+}
+div#app main .specialist {
+  margin-top: 100px;
+}
+div#app main .specialist .container {
+  width: 1650px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+div#app main .specialist .container p:first-child {
+  font-size: 2rem;
+  height: 60px;
+  position: relative;
+  margin-bottom: 40px;
+}
+div#app main .specialist .container p:first-child #border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 3px;
+  background-color: #f9d03f;
+}
+div#app main .specialist .container .info-sp {
+  display: block;
+  width: 760px;
+  margin: auto;
+  margin-bottom: 50px;
+  word-break: break-all;
+  font-size: 0.95rem;
+  color: grey;
+}
+div#app main .specialist .container .container-cardSpecialist {
+  display: flex;
+  justify-content: center;
+}
+div#app main .specialist .container .container-cardSpecialist .cardSpecialist {
+  width: calc((100% / 4) - 40px);
+  height: 400px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+div#app main .specialist .container .container-cardSpecialist .cardSpecialist i {
+  width: 80px;
+  height: auto;
+  font-size: 2rem;
+  padding: 20px;
+  border: 2px solid grey;
+  color: grey;
+  border-radius: 100%;
 }
