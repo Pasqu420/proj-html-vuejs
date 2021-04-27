@@ -8,6 +8,7 @@
   padding: 16px 38px;
   background-color: #31312f;
   letter-spacing: 3px;
+  transition: background-color 0.4s;
   span{
     color: #ffff;
   }
@@ -24,6 +25,7 @@
   padding: 16px 38px;
   background-color: #f9d03f;
   letter-spacing: 3px;
+  transition: background-color 0.4s;
   span{
     color: black;
   }
@@ -33,4 +35,13 @@
       color: #ffff;
     }
   }
+}
+
+// card.front/back;
+@mixin pText{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: grey;
 }

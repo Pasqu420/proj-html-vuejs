@@ -17,19 +17,19 @@ function initVue() {
       },
       navBar: [{
         nav: 'HOME',
-        menu: false
+        menu: true
       }, {
         nav: 'ABOUT',
-        menu: false
+        menu: true
       }, {
         nav: 'SERVICES',
-        menu: false
+        menu: true
       }, {
         nav: 'WORK',
-        menu: false
+        menu: true
       }, {
         nav: 'ARTICLES',
-        menu: false
+        menu: true
       }],
       jumbotron: 'images/construction_thumbnail.jpg',
       cardSpecialist: [{
@@ -56,7 +56,30 @@ function initVue() {
         front: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
         back_p: 'PLANNING',
         back: 'Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.'
+      }],
+      imgCounter: 'images/home-244125289.jpg',
+      counter: [{
+        icon: 'fas fa-suitcase',
+        num: '3534',
+        text: 'PLANNING APPLICATIONS'
+      }, {
+        icon: 'far fa-building',
+        num: '896',
+        text: 'COMPLETED PROJECTS'
+      }, {
+        icon: 'fas fa-users',
+        num: '172',
+        text: 'TRAINED PROFESSIONALS'
+      }, {
+        icon: 'fas fa-globe',
+        num: '19',
+        text: 'INTERNATIONAL OFFICES'
       }]
+    },
+    methods: {
+      changeCard: function changeCard(item) {
+        item.hover = !item.hover;
+      }
     }
   });
 }

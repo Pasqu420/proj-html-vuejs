@@ -116,15 +116,22 @@ div#app{
         a{
           @include btn-grey;
           position: relative;
-          top:55px;
+          top:57px;
           border: 1px solid #ffff;
+          &:hover{
+            background-color: #ffff;
+            border-color: black;
+            span{
+              color:black;
+            }
+          }
         }
       }
     }
     .specialist{
       margin-top: 100px;
       .container{
-        width: 1650px;
+        width: 1660px;
         height: auto;
         margin: auto;
         text-align: center;
@@ -147,34 +154,144 @@ div#app{
           display: block;
           width: 760px;
           margin: auto;
-          margin-bottom: 50px;
+          margin-bottom: 90px;
           word-break: break-all;
           font-size: 0.95rem;
           color: grey;
         }
         .container-cardSpecialist{
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           .cardSpecialist{
-            width: calc((100% / 4) - 40px);
-            height: 400px;
-            margin: 0 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black;
-            i{
-              width: 80px;
-              height: auto;
-              font-size: 2rem;
-              padding: 20px;
-              border: 2px solid grey;
-              color: grey;
-              border-radius: 100%;
+            width: 380px;
+            height: auto;
+            margin: 0 15px;
+            background-color: transparent;
+            border-radius: 10px;
+            line-height: 2.4;
+            perspective: 1000px;
+            &:hover{
+              .innerCard{
+                 transform: rotateY(180deg);
+              }
+              .hoverCardSp{
+                transform: rotateY(360deg);
+                visibility: visible;
+              }
+            }
+            .innerCard, .hoverCardSp{
+              -webkit-backface-visibility: hidden;
+            }
+            .innerCard{
+              width: 100%;
+              height: 100%;
+              background-color: rgb(245, 245, 245);
+              position: relative;
+              transition: transform 0.4s;
+              transform-style: preserve-3d;
+              i{
+                width: 67px;
+                height: auto;
+                font-size: 1.5rem;
+                padding: 20px;
+                border: 1px solid grey;
+                color: grey;
+                border-radius: 100%;
+                margin-top: 20px;
+              }
+              span{
+                display: block;
+                font-size: 2rem
+              }
+              .textCard{
+                @include pText;
+              }
+            }
+            .hoverCardSp{
+              width: 100%;
+              height: 100%;
+              background-color: #fed23f;
+              position: absolute;
+              top:0;
+              right: 0;
+              bottom:0;
+              left: 0;
+              visibility: hidden;
+              transition: transform 0.4s;
+              transform-style: preserve-3d;
+              transform: rotateY(180deg);
+              p:first-child{
+                padding-top: 20px;
+                margin-top: 20px;
+                margin-bottom: 0;
+                font-size: 1.2rem;
+              }
+              .textCard{
+                @include pText;
+              }
+              a{
+                padding: 15px 30px;
+                background-color: #ffe07b;
+                color: black;
+                letter-spacing: 3px;
+                transition: background-color 0.4s;
+                &:hover{
+                  background-color: #31312f;
+                  color: #ffff;
+                }
+              }
             }
           }
         }
+      }
+    }
+    .counter{
+      position: relative;
+      .separator{
+        width: 100%;
+        height: 110px;
+        background-color: #ffff;
+      }
+      .separator.top{
+        position: absolute;
+        top:0;
+        z-index: 100;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+      }
+      .imgCounter{
+        width: 100%;
+        height: 650px;
+        background-image: url(images/home-244125289.jpg);
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .count{
+          margin: 0 60px;
+          text-align: center;
+          i{
+            font-size: 5rem;
+            color: #fed23f;
+          }
+          .num{
+            font-size: 3rem;
+            color: #fed23f;
+            margin: 15px 0;
+          }
+          .countTxt{
+            font-size: 1rem;
+            color:#ffff;
+          }
+        }
+      }
+      .separator.bottom{
+        position: absolute;
+        bottom:0;
+        z-index: 100;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
       }
     }
   }
