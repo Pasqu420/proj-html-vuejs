@@ -658,6 +658,19 @@ div#app main .containerSlider .slider span .mr {
 div#app main .containerSlider .slider span .ml {
   margin-left: 3px;
 }
+div#app main .containerSlider .slider ul {
+  width: 40px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+div#app main .containerSlider .slider ul li .active {
+  background-color: #ffff;
+}
+div#app main .containerSlider .slider ul li i {
+  color: #ffff;
+  border-radius: 100%;
+}
 div#app main .containerSlider .separator.bottom {
   position: absolute;
   bottom: 0;

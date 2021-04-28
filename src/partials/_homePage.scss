@@ -490,6 +490,21 @@ div#app{
             margin-left: 3px;
           }
         }
+        ul{
+          width: 40px;
+          margin-top: 15px;
+          display: flex;
+          justify-content: space-between;
+          li{
+            .active{
+              background-color: #ffff;
+            }
+            i{
+              color:#ffff;
+              border-radius: 100%;
+            }
+          }
+        }
       }
       .separator.bottom{
         @include separatorBott;
