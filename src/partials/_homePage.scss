@@ -1,7 +1,7 @@
 div#app{
   header{
     position: fixed;
-    z-index: 100;
+    z-index: 9999;
     top:0;
     width: 100%;
     height: 130px;
@@ -74,7 +74,6 @@ div#app{
         text-align: center;
         word-spacing: 3px;
         h1{
-          font-family: 'Raleway', sans-serif;
           font-size: 3.7rem;
           font-weight: bold;
           color: white;
@@ -130,34 +129,17 @@ div#app{
     }
     .specialist{
       margin-top: 100px;
-      .container{
+      .containerSp{
         width: 1660px;
-        height: auto;
-        margin: auto;
-        text-align: center;
+        @include rouleCountainer;
         p:first-child{
-          font-size: 2rem;
-          height: 60px;
-          position: relative;
-          margin-bottom: 40px;
-          #border{
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(- 50%, - 50%);
-            width: 200px;
-            height: 3px;
-            background-color: #f9d03f;
+          @include minTitle;
+          .borderI{
+            @include border;
           }
         }
         .info-sp{
-          display: block;
-          width: 760px;
-          margin: auto;
-          margin-bottom: 90px;
-          word-break: break-all;
-          font-size: 0.95rem;
-          color: grey;
+          @include spanStyle;
         }
         .container-cardSpecialist{
           display: flex;
@@ -165,7 +147,7 @@ div#app{
           .cardSpecialist{
             width: 380px;
             height: auto;
-            margin: 0 15px;
+            margin:0px 15px;
             background-color: transparent;
             border-radius: 10px;
             line-height: 2.4;
@@ -222,7 +204,7 @@ div#app{
               transform: rotateY(180deg);
               p:first-child{
                 padding-top: 20px;
-                margin-top: 20px;
+                margin-top: 10px;
                 margin-bottom: 0;
                 font-size: 1.2rem;
               }
@@ -249,36 +231,37 @@ div#app{
       position: relative;
       .separator{
         width: 100%;
-        height: 110px;
+        height: 140px;
         background-color: #ffff;
       }
       .separator.top{
         position: absolute;
         top:0;
         z-index: 100;
-        border-bottom-left-radius: 100%;
-        border-bottom-right-radius: 100%;
+        border-radius: 0 0 50% 50%/0 0 100% 100%;
+        transform: scaleX(1.2);
       }
       .imgCounter{
         width: 100%;
-        height: 650px;
+        height: 680px;
         background-image: url(images/home-244125289.jpg);
         background-position: center;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: 500;
         .count{
-          margin: 0 60px;
+          margin: 0 50px;
           text-align: center;
           i{
-            font-size: 5rem;
+            font-size: 4.8rem;
             color: #fed23f;
           }
           .num{
-            font-size: 3rem;
+            font-size: 3.3rem;
             color: #fed23f;
-            margin: 15px 0;
+            margin-bottom: 5px;
           }
           .countTxt{
             font-size: 1rem;
@@ -290,8 +273,71 @@ div#app{
         position: absolute;
         bottom:0;
         z-index: 100;
-        border-top-left-radius: 100%;
-        border-top-right-radius: 100%;
+        border-radius: 50% 50% 0 0/100% 100% 0 0;
+        transform: scaleX(1.2);
+      }
+    }
+    .recentWork{
+      .containerWork{
+        @include rouleCountainer;
+        p{
+          @include minTitle;
+          i{
+            @include border;
+          }
+        }
+        .info-work{
+          @include spanStyle;
+        }
+        .containerCardWork{
+          width: 1200px;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .cardWork{
+            width: 370px;
+            height: 370px;
+            .innerCard{
+              width: 100%;
+              height: 100%;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .separator{
+            width: 1200px;
+            height: 40px;
+            margin: auto;
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            .border-grey{
+              display: block;
+              width: 370px;
+              height: 1px;
+              background-color: lightgrey;
+            }
+            a{
+              width: 370px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: black;
+              letter-spacing: 3px;
+              transition: background-color 0.4s;
+              &:hover{
+                background-color: #f9d03f;
+              }
+            }
+            .border-grey.center{
+              align-self: center;
+            }
+          }
+        }
       }
     }
   }

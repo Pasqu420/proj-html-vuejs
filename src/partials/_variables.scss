@@ -39,9 +39,44 @@
 
 // card.front/back;
 @mixin pText{
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-bottom: 20px;
   font-size: 0.95rem;
   color: grey;
+}
+
+// regole containerSp/containerWork
+@mixin rouleCountainer{
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+// titoli secondari
+@mixin minTitle{
+  font-size: 2rem;
+  height: 60px;
+  position: relative;
+  margin-bottom: 40px;
+}
+// div border
+@mixin border{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(- 50%, - 50%);
+  width: 200px;
+  height: 3px;
+  background-color: #f9d03f;
+}
+// info sp/WORK
+@mixin spanStyle{
+  display: block;
+  width: 760px;
+  margin: auto;
+  margin-bottom: 50px;
+  word-break: break-all;
+  font-size: 0.95rem;
+  color: grey;
+    line-height: 2;
 }

@@ -19,7 +19,7 @@ a {
 
 div#app header {
   position: fixed;
-  z-index: 100;
+  z-index: 9999;
   top: 0;
   width: 100%;
   height: 130px;
@@ -95,7 +95,6 @@ div#app main .jumbotron .textJumbotro {
   word-spacing: 3px;
 }
 div#app main .jumbotron .textJumbotro h1 {
-  font-family: "Raleway", sans-serif;
   font-size: 3.7rem;
   font-weight: bold;
   color: white;
@@ -187,19 +186,19 @@ div#app main .jumbotron .post a:hover span {
 div#app main .specialist {
   margin-top: 100px;
 }
-div#app main .specialist .container {
+div#app main .specialist .containerSp {
   width: 1660px;
   height: auto;
   margin: auto;
   text-align: center;
 }
-div#app main .specialist .container p:first-child {
+div#app main .specialist .containerSp p:first-child {
   font-size: 2rem;
   height: 60px;
   position: relative;
   margin-bottom: 40px;
 }
-div#app main .specialist .container p:first-child #border {
+div#app main .specialist .containerSp p:first-child .borderI {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -208,39 +207,40 @@ div#app main .specialist .container p:first-child #border {
   height: 3px;
   background-color: #f9d03f;
 }
-div#app main .specialist .container .info-sp {
+div#app main .specialist .containerSp .info-sp {
   display: block;
   width: 760px;
   margin: auto;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
   word-break: break-all;
   font-size: 0.95rem;
   color: grey;
+  line-height: 2;
 }
-div#app main .specialist .container .container-cardSpecialist {
+div#app main .specialist .containerSp .container-cardSpecialist {
   display: flex;
   justify-content: space-between;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist {
   width: 380px;
   height: auto;
-  margin: 0 15px;
+  margin: 0px 15px;
   background-color: transparent;
   border-radius: 10px;
   line-height: 2.4;
   perspective: 1000px;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist:hover .innerCard {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist:hover .innerCard {
   transform: rotateY(180deg);
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist:hover .hoverCardSp {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist:hover .hoverCardSp {
   transform: rotateY(360deg);
   visibility: visible;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .innerCard, div#app main .specialist .container .container-cardSpecialist .cardSpecialist .hoverCardSp {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .innerCard, div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .hoverCardSp {
   -webkit-backface-visibility: hidden;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .innerCard {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .innerCard {
   width: 100%;
   height: 100%;
   background-color: whitesmoke;
@@ -248,7 +248,7 @@ div#app main .specialist .container .container-cardSpecialist .cardSpecialist .i
   transition: transform 0.4s;
   transform-style: preserve-3d;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .innerCard i {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .innerCard i {
   width: 67px;
   height: auto;
   font-size: 1.5rem;
@@ -258,18 +258,18 @@ div#app main .specialist .container .container-cardSpecialist .cardSpecialist .i
   border-radius: 100%;
   margin-top: 20px;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .innerCard span {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .innerCard span {
   display: block;
   font-size: 2rem;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .innerCard .textCard {
-  width: 80%;
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .innerCard .textCard {
+  width: 90%;
   margin: auto;
   margin-bottom: 20px;
   font-size: 0.95rem;
   color: grey;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .hoverCardSp {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .hoverCardSp {
   width: 100%;
   height: 100%;
   background-color: #fed23f;
@@ -283,27 +283,27 @@ div#app main .specialist .container .container-cardSpecialist .cardSpecialist .h
   transform-style: preserve-3d;
   transform: rotateY(180deg);
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .hoverCardSp p:first-child {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .hoverCardSp p:first-child {
   padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 0;
   font-size: 1.2rem;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .hoverCardSp .textCard {
-  width: 80%;
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .hoverCardSp .textCard {
+  width: 90%;
   margin: auto;
   margin-bottom: 20px;
   font-size: 0.95rem;
   color: grey;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .hoverCardSp a {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .hoverCardSp a {
   padding: 15px 30px;
   background-color: #ffe07b;
   color: black;
   letter-spacing: 3px;
   transition: background-color 0.4s;
 }
-div#app main .specialist .container .container-cardSpecialist .cardSpecialist .hoverCardSp a:hover {
+div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist .hoverCardSp a:hover {
   background-color: #31312f;
   color: #ffff;
 }
@@ -312,38 +312,39 @@ div#app main .counter {
 }
 div#app main .counter .separator {
   width: 100%;
-  height: 110px;
+  height: 140px;
   background-color: #ffff;
 }
 div#app main .counter .separator.top {
   position: absolute;
   top: 0;
   z-index: 100;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  transform: scaleX(1.2);
 }
 div#app main .counter .imgCounter {
   width: 100%;
-  height: 650px;
+  height: 680px;
   background-image: url(images/home-244125289.jpg);
   background-position: center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
 }
 div#app main .counter .imgCounter .count {
-  margin: 0 60px;
+  margin: 0 50px;
   text-align: center;
 }
 div#app main .counter .imgCounter .count i {
-  font-size: 5rem;
+  font-size: 4.8rem;
   color: #fed23f;
 }
 div#app main .counter .imgCounter .count .num {
-  font-size: 3rem;
+  font-size: 3.3rem;
   color: #fed23f;
-  margin: 15px 0;
+  margin-bottom: 5px;
 }
 div#app main .counter .imgCounter .count .countTxt {
   font-size: 1rem;
@@ -353,6 +354,85 @@ div#app main .counter .separator.bottom {
   position: absolute;
   bottom: 0;
   z-index: 100;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  transform: scaleX(1.2);
+}
+div#app main .recentWork .containerWork {
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+div#app main .recentWork .containerWork p {
+  font-size: 2rem;
+  height: 60px;
+  position: relative;
+  margin-bottom: 40px;
+}
+div#app main .recentWork .containerWork p i {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 3px;
+  background-color: #f9d03f;
+}
+div#app main .recentWork .containerWork .info-work {
+  display: block;
+  width: 760px;
+  margin: auto;
+  margin-bottom: 50px;
+  word-break: break-all;
+  font-size: 0.95rem;
+  color: grey;
+  line-height: 2;
+}
+div#app main .recentWork .containerWork .containerCardWork {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+div#app main .recentWork .containerWork .containerCardWork .cardWork {
+  width: 370px;
+  height: 370px;
+}
+div#app main .recentWork .containerWork .containerCardWork .cardWork .innerCard {
+  width: 100%;
+  height: 100%;
+}
+div#app main .recentWork .containerWork .containerCardWork .cardWork .innerCard img {
+  width: 100%;
+  height: 100%;
+}
+div#app main .recentWork .containerWork .containerCardWork .separator {
+  width: 1200px;
+  height: 40px;
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+div#app main .recentWork .containerWork .containerCardWork .separator .border-grey {
+  display: block;
+  width: 370px;
+  height: 1px;
+  background-color: lightgrey;
+}
+div#app main .recentWork .containerWork .containerCardWork .separator a {
+  width: 370px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  letter-spacing: 3px;
+  transition: background-color 0.4s;
+}
+div#app main .recentWork .containerWork .containerCardWork .separator a:hover {
+  background-color: #f9d03f;
+}
+div#app main .recentWork .containerWork .containerCardWork .separator .border-grey.center {
+  align-self: center;
 }

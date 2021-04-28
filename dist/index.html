@@ -3,6 +3,7 @@
   <head>
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <!-- font awesame -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -51,10 +52,10 @@
         </section>
 
         <section class="specialist">
-          <div class="container">
+          <div class="containerSp">
             <p>
               Specialists In Modern Construction
-              <i id="border"></i>
+              <i class="borderI"></i>
             </p>
             <span class="info-sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</span>
             <div class="container-cardSpecialist">
@@ -79,11 +80,36 @@
           <div class="imgCounter">
             <div class="count" v-for='count in counter'>
               <i :class="count.icon"></i>
-              <p class="num">{{count.num}}</p>
+              <p class="num">{{count.initCount}}</p>
               <p class="countTxt">{{count.text}}</p>
             </div>
           </div>
           <div class="separator bottom"></div>
+        </section>
+
+        <section class="recentWork">
+          <div class="containerWork">
+            <p>
+              Explore Recent Work
+              <i class="borderI"></i>
+            </p>
+            <span class="info-work">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+            <div class="containerCardWork">
+              <div class="cardWork"  v-for='cardW in cardWork'>
+                <div class="innerCard">
+                  <img :src="cardW.img" alt="">
+                </div>
+                <!-- <div class="hoverCardW">
+
+                </div> -->
+              </div>
+              <div class="separator">
+                <i class="border-grey top"></i>
+                <a href="#" class="viewProj"> <span>VIEW ALL PROJECTS</span> </a>
+                <i class="border-grey center"></i>
+              </div>
+            </div>
+          </div>
         </section>
 
       </main>

@@ -63,29 +63,62 @@ function initVue() {
       [
         {
           icon:'fas fa-suitcase',
+          initCount: 0,
           num:'3534',
           text:'PLANNING APPLICATIONS'
         },
         {
           icon:'far fa-building',
+          initCount: 0,
           num:'896',
           text:'COMPLETED PROJECTS'
         },
         {
           icon:'fas fa-users',
+          initCount: 0,
           num:'172',
           text:'TRAINED PROFESSIONALS'
         },
         {
           icon:'fas fa-globe',
+          initCount: 0,
           num:'19',
           text:'INTERNATIONAL OFFICES'
         }
+      ],
+      cardWork:
+      [
+        {
+          img:'images/project2-featured-15013609.jpg',
+          title:'Florida Heath Facility',
+          type:'Commercial'
+        },
+        {
+          img:'images/project1-featured-294276386.jpg',
+          title:'Main Modernity',
+          type:'Residential'
+        },
+        {
+          img:'images/project3-featured-189023420.jpg',
+          title:'Exclusive Urban Living',
+          type:'Commercial'
+        }
       ]
+    },
+    mounted(){
+      setInterval(this.animationNumber,0.01);
     },
     methods:{
       changeCard: function (item) {
         item.hover = !item.hover;
+      },
+      animationNumber: function () {
+        for (let i = 0; i < this.counter.length; i++) {
+          const elem = this.counter[i];
+          if (elem.initCount < elem.num) {
+            elem.initCount ++;
+          }
+        }
       }
     }
   });
