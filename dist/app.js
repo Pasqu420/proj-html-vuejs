@@ -83,19 +83,57 @@ function initVue() {
       cardWork: [{
         img: 'images/project2-featured-15013609.jpg',
         title: 'Florida Heath Facility',
-        type: 'Commercial'
+        type: 'Commercial',
+        hover: true
       }, {
         img: 'images/project1-featured-294276386.jpg',
         title: 'Main Modernity',
-        type: 'Residential'
+        type: 'Residential',
+        hover: true
       }, {
         img: 'images/project3-featured-189023420.jpg',
         title: 'Exclusive Urban Living',
-        type: 'Commercial'
-      }]
+        type: 'Commercial',
+        hover: true
+      }],
+      cardValues: [{
+        icon: 'fas fa-home',
+        color: '#4ea4a5',
+        title: 'Great Services',
+        text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia'
+      }, {
+        icon: 'far fa-sun',
+        color: '#4e6da5',
+        title: 'Highest Standards',
+        text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia'
+      }, {
+        icon: 'fas fa-users',
+        color: '#f6722a',
+        title: 'Professional Team',
+        text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia'
+      }, {
+        icon: 'far fa-lightbulb',
+        color: '#a7cf47',
+        title: 'Creative Solutions',
+        text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia'
+      }],
+      slider: [{
+        img: 'images/home-testimonial-113165296.jpg',
+        overview: 'No man but feels more of a man in the world if he have but a bit of ground that he can call his own. However small it is on the surface, it is four thousand miles deep; and that is a very handsome property.',
+        name: 'HARRY SMITH',
+        type: 'NEW HOME OWNER'
+      }, {
+        img: 'images/home-testimonial-84268399.jpg',
+        overview: 'Many novice real estate investors soon quit the profession and invest. When you invest in real estate, you often see a side of humanity that stocks, bonds, mutual funds, and saving money shelter you from.',
+        name: 'JOHN DOE',
+        type: 'PROPERTY INVESTOR'
+      }],
+      indSlider: 0,
+      backgroundSlider: 'images/home-parallax-144609983.jpg'
     },
     mounted: function mounted() {
       this.timing = setInterval(this.animationNumber, 0.01);
+      setInterval(this.mySlider, 3000);
     },
     methods: {
       changeCard: function changeCard(item) {
@@ -112,6 +150,13 @@ function initVue() {
           if (elem.initCount < elem.num) {
             elem.initCount++;
           }
+        }
+      },
+      mySlider: function mySlider() {
+        this.indSlider++;
+
+        if (this.indSlider == 2) {
+          this.indSlider = 0;
         }
       }
     }

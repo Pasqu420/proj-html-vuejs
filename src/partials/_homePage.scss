@@ -3,6 +3,7 @@ div#app{
     position: fixed;
     z-index: 9999;
     top:0;
+    left: 0;
     width: 100%;
     height: 130px;
     background-color: #ffff;
@@ -148,6 +149,7 @@ div#app{
             width: 380px;
             height: auto;
             margin:0px 15px;
+            position: relative;
             background-color: transparent;
             border-radius: 10px;
             line-height: 2.4;
@@ -161,14 +163,13 @@ div#app{
                 visibility: visible;
               }
             }
-            .innerCard, .hoverCardSp{
+            .hoverCardSp{
               -webkit-backface-visibility: hidden;
             }
             .innerCard{
               width: 100%;
               height: 100%;
               background-color: rgb(245, 245, 245);
-              position: relative;
               transition: transform 0.4s;
               transform-style: preserve-3d;
               i{
@@ -190,17 +191,8 @@ div#app{
               }
             }
             .hoverCardSp{
-              width: 100%;
-              height: 100%;
+              @include back;
               background-color: #fed23f;
-              position: absolute;
-              top:0;
-              right: 0;
-              bottom:0;
-              left: 0;
-              visibility: hidden;
-              transition: transform 0.4s;
-              transform-style: preserve-3d;
               transform: rotateY(180deg);
               p:first-child{
                 padding-top: 20px;
@@ -230,16 +222,11 @@ div#app{
     .counter{
       position: relative;
       .separator{
-        width: 100%;
-        height: 140px;
+        @include separator;
         background-color: #ffff;
       }
       .separator.top{
-        position: absolute;
-        top:0;
-        z-index: 100;
-        border-radius: 0 0 50% 50%/0 0 100% 100%;
-        transform: scaleX(1.2);
+        @include separatorTop;
       }
       .imgCounter{
         width: 100%;
@@ -270,11 +257,7 @@ div#app{
         }
       }
       .separator.bottom{
-        position: absolute;
-        bottom:0;
-        z-index: 100;
-        border-radius: 50% 50% 0 0/100% 100% 0 0;
-        transform: scaleX(1.2);
+        @include separatorBott;
       }
     }
     .recentWork{
@@ -298,12 +281,49 @@ div#app{
           .cardWork{
             width: 370px;
             height: 370px;
+            position: relative;
+            &:hover{
+              .hoverCardW{
+                transform: rotateX(0deg);
+                animation: fadeIn ease 0.5s;
+              }
+              @include rotateX;
+            }
             .innerCard{
               width: 100%;
               height: 100%;
               img{
                 width: 100%;
                 height: 100%;
+              }
+            }
+            .hoverCardW{
+              @include back;
+              background-color: #fed23f;
+              transform: rotateX(90deg);
+              z-index: 10;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              color: #ffff;
+              .icon{
+                width: 110px;
+                display: flex;
+                justify-content: space-between;
+                i{
+                  display: block;
+                  padding: 17px;
+                  border-radius: 100%;
+                  font-size: 1rem;
+                  background-color: #ffff;
+                  color:#fed23f;
+                }
+              }
+              p{
+                font-size: 1.2rem;
+                height: auto;
+                margin:10px 0;
               }
             }
           }
@@ -314,6 +334,7 @@ div#app{
             margin-top: 80px;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 100px;
             .border-grey{
               display: block;
               width: 370px;
@@ -338,6 +359,141 @@ div#app{
             }
           }
         }
+      }
+    }
+    .values{
+      padding-top: 80px;
+      background-color: #f5f5f5;
+      .containerValues{
+        @include rouleCountainer;
+        .minTitle{
+          @include minTitle;
+          .borderI{
+            @include border;
+          }
+        }
+        .info-values{
+          @include spanStyle;
+        }
+        .containerColumn{
+          width: 1200px;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 50px;
+          .column{
+            .padd{
+              padding: 30px;
+              border-radius: 100%;
+              font-size: 3.5rem;
+              color: #ffff;
+            }
+            .fa-users{
+              padding: 30px 25px;
+            }
+            .fa-lightbulb{
+              padding: 30px 40px;
+            }
+            .titleVal{
+              font-size: 1rem;
+              font-weight: lighter;
+              margin-top: 10px;
+              margin-bottom: 20px;
+              height: 40px;
+              position: relative;
+              .border-min{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(- 50%, - 50%);
+                width: 20px;
+                height: 2px;
+                background-color: grey;
+              }
+            }
+            .text{
+              @include pText;
+              line-height: 2.27;
+            }
+          }
+        }
+      }
+    }
+    .containerSlider{
+      width: 100%;
+      height: calc(100vh - 135px);
+      position: relative;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .separator{
+        @include separator;
+        transform: scale(1.1);
+      }
+      .separator.top{
+        @include separatorTop;
+        top: -30px;
+        background-color: #f5f5f5;
+      }
+      .titleSlider{
+        height: 60px;
+        font-size: 2rem;
+        font-weight: 300;
+        color :#ffff;
+        position: relative;
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        transform: translate(- 50%, - 50%);
+        .borderI{
+          @include border;
+        }
+      }
+      .slider{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top:450px;
+        left: 50%;
+        transform: translate(- 50%, - 50%);
+        .imgSlider{
+          img{
+            width: 120px;
+            height: auto;
+            border-radius: 100%;
+          }
+        }
+        .overview{
+          width: 80%;
+          margin: 40px 0 20px 0;
+          color: #ffff;
+          font-size: 1.2rem;
+          font-weight: 500;
+          font-style: italic;
+          line-height: 2;
+          text-align: center;
+        }
+        span{
+          font-size: 1.1rem;
+          color:#ffff;
+          font-weight: 600;
+          p{
+            display: inline-block;
+          }
+          .mr{
+            margin-right:3px;
+          }
+          .ml{
+            margin-left: 3px;
+          }
+        }
+      }
+      .separator.bottom{
+        @include separatorBott;
+        bottom: -30px;
       }
     }
   }

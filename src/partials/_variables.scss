@@ -80,3 +80,48 @@
   color: grey;
     line-height: 2;
 }
+
+// back card
+@mixin back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom:0;
+  left: 0;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+// animatio rotate x
+@mixin rotateX{
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+}
+
+// separator
+@mixin separator{
+  width: 100%;
+  height: 140px;
+  background-color: #ffff;
+  transform: scaleX(1.2);
+}
+@mixin separatorTop{
+  position: absolute;
+  top:0;
+  z-index: 100;
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+}
+@mixin separatorBott{
+  position: absolute;
+  bottom:0;
+  z-index: 100;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+}

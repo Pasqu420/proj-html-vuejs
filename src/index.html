@@ -4,6 +4,7 @@
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <!-- font awesame -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -99,9 +100,14 @@
                 <div class="innerCard">
                   <img :src="cardW.img" alt="">
                 </div>
-                <!-- <div class="hoverCardW">
-
-                </div> -->
+                <div class="hoverCardW">
+                  <div class="icon">
+                    <i class="fas fa-link"></i>
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <p>{{cardW.title}}</p>
+                  <span>{{cardW.type}}</span>
+                </div>
               </div>
               <div class="separator">
                 <i class="border-grey top"></i>
@@ -110,6 +116,47 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <section class="values">
+          <div class="containerValues">
+            <p class="minTitle">
+              Our Core Values
+              <i class="borderI"></i>
+            </p>
+            <span class="info-values">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+            <div class="containerColumn">
+              <div class="column" v-for='elem in cardValues'>
+                <i :class="elem.icon" class="padd" :style="{'background-color':elem.color}"></i>
+                <p class="titleVal">
+                  {{elem.title}}
+                  <i class="border-min"></i>
+                </p>
+                <span class="text">{{elem.text}}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="containerSlider">
+          <img :src="backgroundSlider">
+          <div class="separator top"></div>
+          <p class="titleSlider">
+            Our Home Owners Say
+            <i class="borderI"></i>
+          </p>
+          <div class="slider">
+            <div class="imgSlider">
+              <img :src="slider[indSlider].img">
+            </div>
+            <p class="overview">{{slider[indSlider].overview}}</p>
+            <span>
+              <p class="mr">{{slider[indSlider].name}}</p>
+              &#8226;
+              <p class="ml">{{slider[indSlider].type}}</p>
+            </span>
+          </div>
+          <div class="separator bottom"></div>
         </section>
 
       </main>
