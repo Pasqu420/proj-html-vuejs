@@ -129,11 +129,30 @@ function initVue() {
         type: 'PROPERTY INVESTOR'
       }],
       indSlider: 0,
-      backgroundSlider: 'images/home-parallax-144609983.jpg'
+      backgroundSlider: 'images/home-parallax-144609983.jpg',
+      cardNews: [{
+        img: 'images/blog-post-134132600.jpg',
+        title: 'Redeveloping Florida’s Remote Southern Coast',
+        date: 'December 7th, 2015',
+        type: 'Architecture, Buildings, Construction, News',
+        overview: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed'
+      }, {
+        img: 'images/blog-post-92486644.jpg',
+        title: 'How We Manage Large Construction Projects',
+        date: 'December 7th, 2015',
+        type: 'Architecture, Construction, Engineering',
+        overview: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed'
+      }, {
+        img: 'images/blog-post-332773904.jpg',
+        title: 'Future proofing a modern home',
+        date: 'December 6th, 2015',
+        type: 'Architecture, Construction, Marketing',
+        overview: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed'
+      }]
     },
     mounted: function mounted() {
       this.timing = setInterval(this.animationNumber, 0.01);
-      setInterval(this.mySlider, 3000);
+      setInterval(this.mySlider, 4000);
     },
     methods: {
       changeCard: function changeCard(item) {

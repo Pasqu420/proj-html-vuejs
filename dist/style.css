@@ -369,7 +369,7 @@ div#app main .recentWork .containerWork p {
   position: relative;
   margin-bottom: 40px;
 }
-div#app main .recentWork .containerWork p i {
+div#app main .recentWork .containerWork p .borderI {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -677,4 +677,49 @@ div#app main .containerSlider .separator.bottom {
   z-index: 100;
   border-radius: 50% 50% 0 0/100% 100% 0 0;
   bottom: -30px;
+}
+div#app main .news {
+  padding-top: 50px;
+}
+div#app main .news .containerNews {
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+div#app main .news .containerNews p {
+  font-size: 2rem;
+  height: 60px;
+  position: relative;
+  margin-bottom: 40px;
+}
+div#app main .news .containerNews p .borderI {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 3px;
+  background-color: #f9d03f;
+}
+div#app main .news .containerNews .info-news {
+  display: block;
+  width: 760px;
+  margin: auto;
+  margin-bottom: 50px;
+  word-break: break-all;
+  font-size: 0.95rem;
+  color: grey;
+  line-height: 2;
+}
+div#app main .news .containerNews .containerCardNews {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+div#app main .news .containerNews .containerCardNews .cardNews {
+  width: 370px;
+  height: 700px;
+  border: 1px solid black;
 }

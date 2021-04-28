@@ -265,7 +265,7 @@ div#app{
         @include rouleCountainer;
         p{
           @include minTitle;
-          i{
+          .borderI{
             @include border;
           }
         }
@@ -273,19 +273,14 @@ div#app{
           @include spanStyle;
         }
         .containerCardWork{
-          width: 1200px;
-          margin: auto;
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
+          @include contCard;
           .cardWork{
             width: 370px;
             height: 370px;
             position: relative;
             &:hover{
               .hoverCardW{
-                transform: rotateX(0deg);
-                animation: fadeIn ease 0.5s;
+                @include activeHover;
               }
               @include rotateX;
             }
@@ -299,32 +294,7 @@ div#app{
             }
             .hoverCardW{
               @include back;
-              background-color: #fed23f;
-              transform: rotateX(90deg);
-              z-index: 10;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              color: #ffff;
-              .icon{
-                width: 110px;
-                display: flex;
-                justify-content: space-between;
-                i{
-                  display: block;
-                  padding: 17px;
-                  border-radius: 100%;
-                  font-size: 1rem;
-                  background-color: #ffff;
-                  color:#fed23f;
-                }
-              }
-              p{
-                font-size: 1.2rem;
-                height: auto;
-                margin:10px 0;
-              }
+              @include hoverRotate;
             }
           }
           .separator{
@@ -509,6 +479,29 @@ div#app{
       .separator.bottom{
         @include separatorBott;
         bottom: -30px;
+      }
+    }
+    .news{
+      padding-top: 50px;
+      .containerNews{
+        @include rouleCountainer;
+        p{
+          @include minTitle;
+          .borderI{
+            @include border;
+          }
+        }
+        .info-news{
+          @include spanStyle;
+        }
+        .containerCardNews{
+          @include contCard;
+          .cardNews{
+            width: 370px;
+            height: 700px;
+            border: 1px solid black;
+          }
+        }
       }
     }
   }
