@@ -79,6 +79,7 @@ function initVue() {
         num: '19',
         text: 'INTERNATIONAL OFFICES'
       }],
+      timing: null,
       cardWork: [{
         img: 'images/project2-featured-15013609.jpg',
         title: 'Florida Heath Facility',
@@ -94,7 +95,7 @@ function initVue() {
       }]
     },
     mounted: function mounted() {
-      setInterval(this.animationNumber, 0.01);
+      this.timing = setInterval(this.animationNumber, 0.01);
     },
     methods: {
       changeCard: function changeCard(item) {
@@ -103,6 +104,10 @@ function initVue() {
       animationNumber: function animationNumber() {
         for (var i = 0; i < this.counter.length; i++) {
           var elem = this.counter[i];
+
+          if (this.counter[0].initCount == this.counter[0].num) {
+            clearInterval(this.timing);
+          }
 
           if (elem.initCount < elem.num) {
             elem.initCount++;

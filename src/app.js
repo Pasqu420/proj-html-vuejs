@@ -86,6 +86,7 @@ function initVue() {
           text:'INTERNATIONAL OFFICES'
         }
       ],
+      timing:null,
       cardWork:
       [
         {
@@ -106,7 +107,7 @@ function initVue() {
       ]
     },
     mounted(){
-      setInterval(this.animationNumber,0.01);
+      this.timing = setInterval(this.animationNumber,0.01);
     },
     methods:{
       changeCard: function (item) {
@@ -115,6 +116,9 @@ function initVue() {
       animationNumber: function () {
         for (let i = 0; i < this.counter.length; i++) {
           const elem = this.counter[i];
+          if(this.counter[0].initCount==this.counter[0].num){
+            clearInterval(this.timing);
+          }
           if (elem.initCount < elem.num) {
             elem.initCount ++;
           }
