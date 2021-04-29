@@ -149,7 +149,40 @@ function initVue() {
         type: 'Architecture, Construction, Marketing',
         overview: 'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed'
       }],
-      sliderLoghi: ['images/home-logo1-219096700-320x202.png', 'images/home-logo2-219096700-320x202.png', 'images/home-logo9-219096700-320x202.png', 'images/home-logo10-219096700-320x202.png', 'images/home-logo11-219096700-320x202.png']
+      sliderLoghi: ['images/home-logo1-219096700-320x202.png', 'images/home-logo2-219096700-320x202.png', 'images/home-logo9-219096700-320x202.png', 'images/home-logo10-219096700-320x202.png', 'images/home-logo11-219096700-320x202.png'],
+      footerCard_1: {
+        logo: 'images/footer-logo.png',
+        overview: 'We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.'
+      },
+      footerCard_2: {
+        title: 'LATEST TWEETS',
+        logo: 'images/3a74ce3d0532b7773b174c45ca3bd05a_normal.png',
+        theme: 'Fusion',
+        overview_1: 'Nested Columns provide you with a significant amount of additional flexibility when designing layouts with the',
+        hashtag: '#avada #WebsiteBuilder.',
+        overview_2: "You can add columns inside of columns to create uniquely styled CTA's & design cues to promote your content & products",
+        link: 'bit.ly/3vuElD4 ',
+        screen: 'images/screen.jfif',
+        iconTw: 'fab fa-twitter',
+        iconLove: 'far fa-heart',
+        iconShare: 'images/image (3).svg',
+        timePosted: '15h'
+      },
+      footerCard_3: {
+        title: 'CONTACT US TODAY',
+        iconCorporate: 'fas fa-globe',
+        corporateLocation: 'Corporate Location 1600 Amphitheatre Parkway London WC1 1BA',
+        iconResidential: 'fas fa-home',
+        residentialLocation: ' Residential Location 9521 Broadsberry Avenue Paddington RC7 9ZA ',
+        numberIcon: 'fas fa-phone',
+        number: ['1.800.458.556', '1.800.532.2112'],
+        dayIcon: 'fas fa-clock',
+        day: ['Monday – Friday: 9:00 AM – 6:00 PM', 'Saturday – Sunday: 9:00 AM – 12:00 PM']
+      },
+      footerCard_4: {
+        title: 'FIND US',
+        privacy: 'For privacy reasons Google Maps needs your permission to be loaded.'
+      }
     },
     mounted: function mounted() {
       this.timing = setInterval(this.animationNumber, 0.01);

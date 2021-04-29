@@ -35,7 +35,6 @@
       </header>
 
       <main>
-
         <section class="jumbotron">
           <img :src="jumbotron">
           <div class="textJumbotro">
@@ -221,10 +220,95 @@
             </div>
           </div>
         </section>
-
       </main>
 
       <footer>
+        <div class="containerFooter">
+
+          <div class="card _1">
+            <div class="logo_1">
+              <img :src="footerCard_1.logo">
+            </div>
+            <p>{{footerCard_1.overview}}</p>
+          </div>
+
+          <div class="card _2">
+            <p>{{footerCard_2.title}}</p>
+            <div class="inner">
+              <div class="logo_2">
+                <img :src="footerCard_2.logo">
+              </div>
+              <div class="text">
+                <div class="theme">
+                  <div class="themeTxt">
+                    <p>Theme{{footerCard_2.theme}}</p>
+                    <span>@Theme_{{footerCard_2.theme}}</span>
+                  </div>
+                  <i :class="footerCard_2.iconTw"></i>
+                </div>
+                <div class="overview">
+                  <p>
+                    {{footerCard_2.overview_1}}
+                    <span>{{footerCard_2.hashtag}}</span>
+                    {{footerCard_2.overview_2}}
+                    <span>{{footerCard_2.link}}</span>
+                  </p>
+                </div>
+                <div class="screen">
+                  <img src="footerCard_2.screen" alt="">
+                </div>
+                <div class="icon">
+                  <i :class="footerCard_2.iconLove"></i>
+                  <img :src="footerCard_2.iconShare">
+                  <span>{{footerCard_2.timePosted}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card _3">
+            <p>{{footerCard_3.title}}</p>
+            <ul>
+              <li>
+                <i :class='footerCard_3.iconCorporate'></i>
+                <p>{{footerCard_3.corporateLocation}}</p>
+              </li>
+              <li>
+                <i :class='footerCard_3.iconResidential'></i>
+                <p>{{footerCard_3.residentialLocation}}</p>
+              </li>
+              <li>
+                <i :class='footerCard_3.numberIcon'></i>
+                <p>{{footerCard_3.number[0]}}</p>
+              </li>
+              <li>
+                <i :class='footerCard_3.numberIcon'></i>
+                <p>{{footerCard_3.number[1]}}</p>
+              </li>
+              <li>
+                <i :class='footerCard_3.dayIcon'></i>
+                <p>{{footerCard_3.day[0]}}</p>
+              </li>
+              <li>
+                <i :class='footerCard_3.dayIcon'></i>
+                <p>{{footerCard_3.day[1]}}</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card _4">
+            <p>{{footerCard_4.title}}</p>
+            <div class="inner">
+              <p>{{footerCard_4.privacy}}</p>
+              <a href="#"> <span>I ACCEPT</span> </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="copyright">
+
+        </div>
 
       </footer>
 
