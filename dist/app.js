@@ -190,13 +190,12 @@ function initVue() {
       setInterval(this.mySlider, 4000);
     },
     methods: {
-      changeCard: function changeCard(item) {
-        item.hover = !item.hover;
-      },
       hoverLinkNav: function hoverLinkNav(item) {
+        //cambia color all'hover
         item.menu = !item.menu;
       },
       animationNumber: function animationNumber() {
+        //animazione numeri section counter
         for (var i = 0; i < this.counter.length; i++) {
           var elem = this.counter[i];
 
@@ -210,6 +209,7 @@ function initVue() {
         }
       },
       mySlider: function mySlider() {
+        //animazione slider
         this.indSlider++;
 
         if (this.indSlider == 2) {

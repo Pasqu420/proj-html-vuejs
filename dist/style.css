@@ -76,6 +76,7 @@ div#app header .navBar nav a:hover span {
 }
 div#app header .navBar nav a span {
   color: black;
+  letter-spacing: 1.5px;
 }
 div#app main {
   width: 100%;
@@ -101,7 +102,7 @@ div#app main .jumbotron .textJumbotro {
 div#app main .jumbotron .textJumbotro h1 {
   font-size: 3.7rem;
   font-weight: bold;
-  color: white;
+  color: #ffff;
 }
 div#app main .jumbotron .textJumbotro p {
   font-size: 1.6rem;
@@ -233,7 +234,6 @@ div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist 
   background-color: transparent;
   border-radius: 10px;
   line-height: 2.4;
-  perspective: 1000px;
 }
 div#app main .specialist .containerSp .container-cardSpecialist .cardSpecialist:hover .innerCard {
   transform: rotateY(180deg);
@@ -970,7 +970,7 @@ div#app main .inspiringSpaces .containerSpaces .right .minP {
   color: #ffff;
 }
 div#app footer {
-  border-top: 15px solid #3f3f3f;
+  border-top: 12px solid #3f3f3f;
   height: 700px;
   background-color: #1e1e1e;
   position: relative;
@@ -1012,6 +1012,9 @@ div#app footer .containerFooter .card._1 .btnFooter_1:hover {
 }
 div#app footer .containerFooter .card._1 .btnFooter_1:hover span {
   color: #ffff;
+}
+div#app footer .containerFooter .card._2:hover {
+  background-color: rgba(25, 30, 35, 0.61);
 }
 div#app footer .containerFooter .card._2 .title {
   color: #fed03d;

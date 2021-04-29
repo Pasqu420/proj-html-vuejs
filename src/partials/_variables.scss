@@ -1,3 +1,9 @@
+$white:#ffff;
+$gold:#fed455;
+$orangePrimary:#f9d03f;
+$orangeSecond:#fed23f;
+$orangethird:#fed03d;
+
 @mixin d-flex{
   display: flex;
   justify-content: space-between;
@@ -13,7 +19,7 @@
     color: #ffff;
   }
   &:hover{
-    background-color: #f9d03f;
+    background-color: $orangePrimary;
     span{
       color: black;
     }
@@ -23,7 +29,7 @@
 // btn orange
 @mixin btn-lightOrange{
   padding: 16px 38px;
-  background-color: #f9d03f;
+  background-color: $orangePrimary;
   letter-spacing: 3px;
   transition: background-color 0.4s;
   span{
@@ -46,20 +52,20 @@
   color: grey;
 }
 
-// regole containerSp/containerWork
+// regole containerSp/containerWork/values/news/trusted
 @mixin rouleCountainer{
   height: auto;
   margin: auto;
   text-align: center;
 }
-// titoli secondari
+// titoli secondari section
 @mixin minTitle{
   font-size: 2rem;
   height: 60px;
   position: relative;
   margin-bottom: 40px;
 }
-// i border
+// bordo gold titoli section
 @mixin border{
   position: absolute;
   bottom: 0;
@@ -67,9 +73,9 @@
   transform: translate(- 50%, - 50%);
   width: 200px;
   height: 3px;
-  background-color: #f9d03f;
+  background-color: $orangePrimary;
 }
-// info sp/WORK
+// info section containerSp/containerWork/values/news/trusted
 @mixin spanStyle{
   display: block;
   width: 760px;
@@ -81,7 +87,7 @@
     line-height: 2;
 }
 
-// back card
+// back card specialist/news
 @mixin back{
   width: 100%;
   height: 100%;
@@ -94,7 +100,7 @@
   transform-style: preserve-3d;
 }
 
-// separator
+// separator counter/slider
 @mixin separator{
   width: 100%;
   height: 140px;
@@ -139,12 +145,11 @@
   letter-spacing: 3px;
   transition: background-color 0.4s;
   &:hover{
-    background-color: #f9d03f;
+    background-color: $orangePrimary;
   }
 }
-////////
 
-// section work / news
+// contenitore section con card
 @mixin contCard{
   width: 1200px;
   margin: auto;
@@ -153,7 +158,7 @@
   flex-wrap: wrap;
 }
 
-// animatio rotate x
+// animazione card specialist/news
 @mixin rotateX{
   @keyframes fadeIn {
     0% {
@@ -172,7 +177,7 @@
 }
 // hover rotate X
 @mixin hoverRotate{
-  background-color: #fed23f;
+  background-color: $orangeSecond;
   transform: rotateX(90deg);
   z-index: 10;
   display: flex;
@@ -190,7 +195,7 @@
       border-radius: 100%;
       font-size: 1rem;
       background-color: #ffff;
-      color:#fed23f;
+      color:$orangeSecond;
     }
   }
   p{

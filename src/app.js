@@ -234,13 +234,10 @@ function initVue() {
       setInterval(this.mySlider,4000)
     },
     methods:{
-      changeCard: function (item) {
-        item.hover = !item.hover;
-      },
-      hoverLinkNav:function (item){
+      hoverLinkNav:function (item){//cambia color all'hover
         item.menu = !item.menu;
       },
-      animationNumber: function () {
+      animationNumber: function () {//animazione numeri section counter
         for (let i = 0; i < this.counter.length; i++) {
           const elem = this.counter[i];
           if(this.counter[0].initCount==this.counter[0].num){
@@ -251,7 +248,7 @@ function initVue() {
           }
         }
       },
-      mySlider:function () {
+      mySlider:function () {//animazione slider
         this.indSlider ++
         if (this.indSlider ==2) {
           this.indSlider = 0

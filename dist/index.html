@@ -62,7 +62,7 @@
             </p>
             <span class="info-sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</span>
             <div class="container-cardSpecialist">
-              <div class="cardSpecialist" v-for='card in cardSpecialist'  @mouseenter='changeCard(card)' @mouseleave='changeCard(card)'>
+              <div class="cardSpecialist" v-for='card in cardSpecialist'>
                 <div class="innerCard">
                   <i :class="card.icon"></i>
                   <span>{{card.title}}</span>

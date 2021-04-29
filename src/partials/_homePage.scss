@@ -6,7 +6,7 @@ div#app{
     left: 0;
     width: 100%;
     height: 130px;
-    background-color: #ffff;
+    background-color: $white;
     word-spacing: 4px;
     .navBar{
       width: 88%;
@@ -35,25 +35,26 @@ div#app{
             font-size: 0.9rem;
           }
           .gold{
-            color:#fed455;
+            color:$gold;
           }
           li:first-child{
-            color:#fed455;
+            color:$gold;
           }
         }
         a{
           padding: 13px 35px;
-          background-color: #fed23f;
+          background-color: $orangeSecond;
           font-size: 0.9rem;
           transition: background-color 0.4s;
           &:hover{
             background-color: #1e1e1e;
             span{
-              color: #ffff;
+              color: $white;
             }
           }
           span{
             color: black;
+            letter-spacing: 1.5px;
           }
         }
       }
@@ -79,11 +80,11 @@ div#app{
         h1{
           font-size: 3.7rem;
           font-weight: bold;
-          color: white;
+          color: $white;
         }
         p{
           font-size: 1.6rem;
-          color:#fed455;
+          color:$gold;
           margin-top: 15px;
           margin-bottom: 30px;
         }
@@ -109,7 +110,7 @@ div#app{
       }
       .post{
         height: 130px;
-        background-color: #f9d03f;
+        background-color: $orangePrimary;
         margin-top: -3px;
         display: flex;
         flex-direction: column;
@@ -119,9 +120,9 @@ div#app{
           @include btn-grey;
           position: relative;
           top:57px;
-          border: 1px solid #ffff;
+          border: 1px solid $white;
           &:hover{
-            background-color: #ffff;
+            background-color: $white;
             border-color: black;
             span{
               color:black;
@@ -155,7 +156,6 @@ div#app{
             background-color: transparent;
             border-radius: 10px;
             line-height: 2.4;
-            perspective: 1000px;
             &:hover{
               .innerCard{
                  transform: rotateY(180deg);
@@ -194,7 +194,7 @@ div#app{
             }
             .hoverCardSp{
               @include back;
-              background-color: #fed23f;
+              background-color: $orangeSecond;
               transform: rotateY(180deg);
               p:first-child{
                 padding-top: 20px;
@@ -213,7 +213,7 @@ div#app{
                 transition: background-color 0.4s;
                 &:hover{
                   background-color: #31312f;
-                  color: #ffff;
+                  color: $white;
                 }
               }
             }
@@ -225,7 +225,7 @@ div#app{
       position: relative;
       .separator{
         @include separator;
-        background-color: #ffff;
+        background-color: $white;
       }
       .separator.top{
         @include separatorTop;
@@ -245,16 +245,16 @@ div#app{
           text-align: center;
           i{
             font-size: 4.8rem;
-            color: #fed23f;
+            color: $orangeSecond;
           }
           .num{
             font-size: 3.3rem;
-            color: #fed23f;
+            color: $orangeSecond;
             margin-bottom: 5px;
           }
           .countTxt{
             font-size: 1rem;
-            color:#ffff;
+            color:$white;
           }
         }
       }
@@ -341,7 +341,7 @@ div#app{
                 padding: 30px;
                 border-radius: 100%;
                 font-size: 3.5rem;
-                color: #ffff;
+                color: $white;
                 position: relative;
               }
               .fa-users{
@@ -398,7 +398,7 @@ div#app{
         height: 70px;
         font-size: 2rem;
         font-weight: 300;
-        color :#ffff;
+        color :$white;
         position: relative;
         position: absolute;
         top: 220px;
@@ -428,7 +428,7 @@ div#app{
         .overview{
           width: 80%;
           margin-bottom:20px;
-          color: #ffff;
+          color: $white;
           font-size: 1.2rem;
           font-weight: 500;
           font-style: italic;
@@ -437,7 +437,7 @@ div#app{
         }
         span{
           font-size: 1.1rem;
-          color:#ffff;
+          color:$white;
           font-weight: 600;
           p{
             display: inline-block;
@@ -456,10 +456,10 @@ div#app{
           justify-content: space-between;
           li{
             .active{
-              background-color: #ffff;
+              background-color: $white;
             }
             i{
-              color:#ffff;
+              color:$white;
               border-radius: 100%;
             }
           }
@@ -491,7 +491,7 @@ div#app{
           .cardNews{
             width: 370px;
             height: auto;
-            background-color: #ffff;
+            background-color: $white;
             .innerCard{
               .imgCard{
                 position: relative;
@@ -545,12 +545,12 @@ div#app{
             .border-white{
               @include borderView;
               height: 2px;
-              background-color: #ffff;
+              background-color: $white;
             }
             a{
               @include aView;
               &:hover{
-                background-color: #f9d03f;
+                background-color: $orangePrimary;
               }
             }
             .border-white.center{
@@ -604,7 +604,7 @@ div#app{
         word-spacing: 1.5;
         .left{
           width: 718px;
-          color: #ffff;
+          color: $white;
           .titleSpaces{
             @include minTitle;
             letter-spacing:3px;
@@ -635,14 +635,14 @@ div#app{
           .minP{
             width: 310px;
             text-align: center;
-            color: #ffff;
+            color: $white;
           }
         }
       }
     }
   }
   footer{
-    border-top: 15px solid #3f3f3f;
+    border-top: 12px solid #3f3f3f;
     height: 700px;
     background-color: #1e1e1e;
     position: relative;
@@ -674,8 +674,11 @@ div#app{
         }
       }
       .card._2{
+        &:hover{
+          background-color: rgba(25,30,35,.61);
+        }
         .title{
-          color:#fed03d;
+          color:$orangethird;
           font-size: 1rem;
           font-weight: bold;
           letter-spacing: 1.5px;
@@ -699,7 +702,7 @@ div#app{
               justify-content: space-between;
               margin-bottom: 5px;
               .themeTxt{
-                color: #ffff;
+                color: $white;
                 font-weight: bold;
                 span{
                   font-weight: 200;
@@ -716,7 +719,7 @@ div#app{
               p{
                 line-height: 1.3;
                 font-weight: 300;
-                color: #ffff;
+                color: $white;
                 a{
                   color:#2b7bb9;
                 }
@@ -752,7 +755,7 @@ div#app{
       }
       .card._3{
         .title{
-          color:#fed03d;
+          color:$orangethird;
           font-size: 1rem;
           font-weight: bold;
           letter-spacing: 1.5px;
@@ -777,7 +780,7 @@ div#app{
       }
       .card._4{
         p{
-          color:#fed03d;
+          color:$orangethird;
           font-size: 1rem;
           font-weight: bold;
           letter-spacing: 1.5px;
