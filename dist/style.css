@@ -1013,9 +1013,6 @@ div#app footer .containerFooter .card._1 .btnFooter_1:hover {
 div#app footer .containerFooter .card._1 .btnFooter_1:hover span {
   color: #ffff;
 }
-div#app footer .containerFooter .card._2:hover {
-  background-color: rgba(25, 30, 35, 0.61);
-}
 div#app footer .containerFooter .card._2 .title {
   color: #fed03d;
   font-size: 1rem;
@@ -1025,6 +1022,9 @@ div#app footer .containerFooter .card._2 .title {
 div#app footer .containerFooter .card._2 .inner {
   display: flex;
   margin-top: 20px;
+}
+div#app footer .containerFooter .card._2 .inner:hover {
+  background-color: rgba(25, 30, 35, 0.61);
 }
 div#app footer .containerFooter .card._2 .inner .logo_2 {
   margin: 0 8px;
@@ -1145,4 +1145,29 @@ div#app footer .copyright div i {
   color: #a5a5a5;
   margin: 0 10px;
   cursor: pointer;
+}
+div#app .iconFixed {
+  width: 70px;
+  height: 70px;
+  background-color: #ffff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 250px;
+  right: 20px;
+  z-index: 9999;
+}
+div#app .iconFixed .buy {
+  text-align: center;
+  color: #33475b;
+}
+div#app .iconFixed .buy i {
+  font-size: 1.2rem;
+  transform: rotatey(180deg);
+  margin-bottom: 10px;
+}
+div#app .iconFixed .buy p {
+  font-size: 0.6rem;
 }

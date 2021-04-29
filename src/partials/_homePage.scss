@@ -674,9 +674,6 @@ div#app{
         }
       }
       .card._2{
-        &:hover{
-          background-color: rgba(25,30,35,.61);
-        }
         .title{
           color:$orangethird;
           font-size: 1rem;
@@ -684,6 +681,9 @@ div#app{
           letter-spacing: 1.5px;
         }
         .inner{
+          &:hover{
+            background-color: rgba(25,30,35,.61);
+          }
           display: flex;
           margin-top: 20px;
           .logo_2{
@@ -819,6 +819,31 @@ div#app{
           margin: 0 10px;
           cursor: pointer;
         }
+      }
+    }
+  }
+  .iconFixed{
+    width: 70px;
+    height: 70px;
+    background-color: $white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:250px;
+    right: 20px;
+    z-index: 9999;
+    .buy{
+      text-align: center;
+      color:#33475b;
+      i{
+        font-size: 1.2rem;
+        transform: rotatey(180deg);
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 0.6rem;
       }
     }
   }
