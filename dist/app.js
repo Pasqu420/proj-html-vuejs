@@ -163,8 +163,8 @@ function initVue() {
         overview_2: "You can add columns inside of columns to create uniquely styled CTA's & design cues to promote your content & products",
         link: 'bit.ly/3vuElD4 ',
         screen: 'images/screen.jfif',
-        iconTw: 'fab fa-twitter',
-        iconLove: 'far fa-heart',
+        iconTw: 'images/image (1).svg',
+        iconLove: 'images/image (2).svg',
         iconShare: 'images/image (3).svg',
         timePosted: '15h'
       },
@@ -181,8 +181,9 @@ function initVue() {
       },
       footerCard_4: {
         title: 'FIND US',
-        privacy: 'For privacy reasons Google Maps needs your permission to be loaded.'
-      }
+        img: 'images/staticmap.png'
+      },
+      copyrightIcon: ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-youtube', 'fab fa-instagram']
     },
     mounted: function mounted() {
       this.timing = setInterval(this.animationNumber, 0.01);

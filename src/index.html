@@ -230,50 +230,61 @@
               <img :src="footerCard_1.logo">
             </div>
             <p>{{footerCard_1.overview}}</p>
+            <a class='btnFooter_1' href="#"> <span>LEARN MORE</span> </a>
           </div>
 
           <div class="card _2">
-            <p>{{footerCard_2.title}}</p>
+            <p class="title">{{footerCard_2.title}}</p>
             <div class="inner">
+
               <div class="logo_2">
                 <img :src="footerCard_2.logo">
               </div>
+
               <div class="text">
+
                 <div class="theme">
                   <div class="themeTxt">
                     <p>Theme{{footerCard_2.theme}}</p>
                     <span>@Theme_{{footerCard_2.theme}}</span>
                   </div>
-                  <i :class="footerCard_2.iconTw"></i>
+                  <img :src="footerCard_2.iconTw">
                 </div>
+
                 <div class="overview">
                   <p>
                     {{footerCard_2.overview_1}}
-                    <span>{{footerCard_2.hashtag}}</span>
+                    <a href="#">{{footerCard_2.hashtag}}</a>
                     {{footerCard_2.overview_2}}
-                    <span>{{footerCard_2.link}}</span>
+                    <a href="#">{{footerCard_2.link}}</a>
                   </p>
                 </div>
+
                 <div class="screen">
-                  <img src="footerCard_2.screen" alt="">
+                  <img :src="footerCard_2.screen" alt="">
                 </div>
+
                 <div class="icon">
-                  <i :class="footerCard_2.iconLove"></i>
-                  <img :src="footerCard_2.iconShare">
+                  <div>
+                    <img :src="footerCard_2.iconLove">
+                    <img :src="footerCard_2.iconShare">
+                  </div>
                   <span>{{footerCard_2.timePosted}}</span>
                 </div>
+
               </div>
+
             </div>
           </div>
 
           <div class="card _3">
-            <p>{{footerCard_3.title}}</p>
+            <p class="title">{{footerCard_3.title}}</p>
             <ul>
-              <li>
+              <li class="width">
                 <i :class='footerCard_3.iconCorporate'></i>
                 <p>{{footerCard_3.corporateLocation}}</p>
               </li>
-              <li>
+              <li class="width">
                 <i :class='footerCard_3.iconResidential'></i>
                 <p>{{footerCard_3.residentialLocation}}</p>
               </li>
@@ -299,15 +310,19 @@
           <div class="card _4">
             <p>{{footerCard_4.title}}</p>
             <div class="inner">
-              <p>{{footerCard_4.privacy}}</p>
-              <a href="#"> <span>I ACCEPT</span> </a>
+              <img :src="footerCard_4.img" alt="">
             </div>
           </div>
 
         </div>
 
         <div class="copyright">
-
+          <div>
+            <p>©COPYRIGHT 2012 - 2021 | AVADA THEME BY <span> THEMEFUSION </span>| ALL RIGHTS RESERVED | POWERED BY <span>WORDPRESS</span> </p>
+          </div>
+          <div class="icon">
+            <i v-for='i in copyrightIcon' :class='i'></i>
+          </div>
         </div>
 
       </footer>

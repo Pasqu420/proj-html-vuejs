@@ -539,7 +539,7 @@ div#app{
       }
     }
     .trusted{
-      padding-top: 50px;
+      padding-top: 100px;
       .containerTrusted{
         @include rouleCountainer;
         .titleTrusted{
@@ -621,28 +621,180 @@ div#app{
   }
   footer{
     border-top: 15px solid #3f3f3f;
-    height: 500px;
+    height: 700px;
     background-color: #1e1e1e;
+    position: relative;
     .containerFooter{
-      width: 100%;
-      height: 100%;
+      width: 92%;
+      height: auto;
       margin: auto;
       display: flex;
-      align-items: center;
       justify-content: space-around;
+      padding-top: 50px;
       .card{
         width: 393px;
-        height: 330px;
-        border: 1px solid #ffff;
       }
-      .card_4{
-        background-color: #1b1b1b;
+      .card._1{
+        .logo_1{
+          margin-bottom: 30px;
+        }
+        p{
+          color:#747474;
+          line-height: 2.27;
+          font-size: 0.9rem;
+        }
+        .btnFooter_1{
+          display: inline-block;
+          @include btn-lightOrange;
+          margin-top: 20px;
+          padding: 13px 25px;
+          font-weight: 200;
+        }
+      }
+      .card._2{
+        .title{
+          color:#fed03d;
+          font-size: 1rem;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+        }
+        .inner{
+          display: flex;
+          margin-top: 20px;
+          .logo_2{
+            margin: 0 8px;
+            img{
+              width:32px;
+              height: auto;
+              border-radius: 100%;
+              cursor: pointer;
+            }
+          }
+          .text{
+            .theme{
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 5px;
+              .themeTxt{
+                color: #ffff;
+                font-weight: bold;
+                span{
+                  font-weight: 200;
+                  font-size: 0.8rem;
+                  cursor: pointer;
+                }
+              }
+              img{
+                width: 1.3rem;
+                cursor: pointer;
+              }
+            }
+            .overview{
+              p{
+                line-height: 1.3;
+                font-weight: 300;
+                color: #ffff;
+                a{
+                  color:#2b7bb9;
+                }
+              }
+            }
+            .screen{
+              margin-top: 20px;
+              margin-bottom: 10px;
+              img{
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+              }
+            }
+            .icon{
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              div {
+                img{
+                  cursor: pointer;
+                }
+              }
+              span{
+                cursor: pointer;
+                font-size: 0.8rem;
+                color: #667580;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .card._3{
+        .title{
+          color:#fed03d;
+          font-size: 1rem;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          margin-bottom: 25px;
+        }
+        ul{
+          color: #717171;
+          .width{
+            width: 55%;
+          }
+          li{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 2;
+            i{
+              margin-right: 17px;
+            }
+          }
+        }
+      }
+      .card._4{
+        p{
+          color:#fed03d;
+          font-size: 1rem;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+        }
+        .inner{
+          margin-top: 30px;
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
       }
     }
     .copyright{
       width: 100%;
       height: 75px;
-      background-color: black;
+      background-color: #111111;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+      div{
+        p{
+          font-size: 0.8rem;
+          color:#5f5f5f;
+          span{
+            color:#a5a5a5;
+          }
+        }
+        i{
+          font-size: 1rem;
+          color:#a5a5a5;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

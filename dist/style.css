@@ -790,7 +790,7 @@ div#app main .news .containerNews .containerCardNews .separator .border-white.ce
   align-self: center;
 }
 div#app main .trusted {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 div#app main .trusted .containerTrusted {
   height: auto;
@@ -914,27 +914,175 @@ div#app main .inspiringSpaces .containerSpaces .right .minP {
 }
 div#app footer {
   border-top: 15px solid #3f3f3f;
-  height: 500px;
+  height: 700px;
   background-color: #1e1e1e;
+  position: relative;
 }
 div#app footer .containerFooter {
-  width: 100%;
-  height: 100%;
+  width: 92%;
+  height: auto;
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  padding-top: 50px;
 }
 div#app footer .containerFooter .card {
   width: 393px;
-  height: 330px;
-  border: 1px solid #ffff;
 }
-div#app footer .containerFooter .card_4 {
-  background-color: #1b1b1b;
+div#app footer .containerFooter .card._1 .logo_1 {
+  margin-bottom: 30px;
+}
+div#app footer .containerFooter .card._1 p {
+  color: #747474;
+  line-height: 2.27;
+  font-size: 0.9rem;
+}
+div#app footer .containerFooter .card._1 .btnFooter_1 {
+  display: inline-block;
+  padding: 16px 38px;
+  background-color: #f9d03f;
+  letter-spacing: 3px;
+  transition: background-color 0.4s;
+  margin-top: 20px;
+  padding: 13px 25px;
+  font-weight: 200;
+}
+div#app footer .containerFooter .card._1 .btnFooter_1 span {
+  color: black;
+}
+div#app footer .containerFooter .card._1 .btnFooter_1:hover {
+  background-color: #31312f;
+}
+div#app footer .containerFooter .card._1 .btnFooter_1:hover span {
+  color: #ffff;
+}
+div#app footer .containerFooter .card._2 .title {
+  color: #fed03d;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+div#app footer .containerFooter .card._2 .inner {
+  display: flex;
+  margin-top: 20px;
+}
+div#app footer .containerFooter .card._2 .inner .logo_2 {
+  margin: 0 8px;
+}
+div#app footer .containerFooter .card._2 .inner .logo_2 img {
+  width: 32px;
+  height: auto;
+  border-radius: 100%;
+  cursor: pointer;
+}
+div#app footer .containerFooter .card._2 .inner .text .theme {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+div#app footer .containerFooter .card._2 .inner .text .theme .themeTxt {
+  color: #ffff;
+  font-weight: bold;
+}
+div#app footer .containerFooter .card._2 .inner .text .theme .themeTxt span {
+  font-weight: 200;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+div#app footer .containerFooter .card._2 .inner .text .theme img {
+  width: 1.3rem;
+  cursor: pointer;
+}
+div#app footer .containerFooter .card._2 .inner .text .overview p {
+  line-height: 1.3;
+  font-weight: 300;
+  color: #ffff;
+}
+div#app footer .containerFooter .card._2 .inner .text .overview p a {
+  color: #2b7bb9;
+}
+div#app footer .containerFooter .card._2 .inner .text .screen {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+div#app footer .containerFooter .card._2 .inner .text .screen img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+div#app footer .containerFooter .card._2 .inner .text .icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div#app footer .containerFooter .card._2 .inner .text .icon div img {
+  cursor: pointer;
+}
+div#app footer .containerFooter .card._2 .inner .text .icon span {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #667580;
+  text-decoration: underline;
+}
+div#app footer .containerFooter .card._3 .title {
+  color: #fed03d;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+div#app footer .containerFooter .card._3 ul {
+  color: #717171;
+}
+div#app footer .containerFooter .card._3 ul .width {
+  width: 55%;
+}
+div#app footer .containerFooter .card._3 ul li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 2;
+}
+div#app footer .containerFooter .card._3 ul li i {
+  margin-right: 17px;
+}
+div#app footer .containerFooter .card._4 p {
+  color: #fed03d;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+div#app footer .containerFooter .card._4 .inner {
+  margin-top: 30px;
+}
+div#app footer .containerFooter .card._4 .inner img {
+  width: 100%;
+  height: auto;
 }
 div#app footer .copyright {
   width: 100%;
   height: 75px;
-  background-color: black;
+  background-color: #111111;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+div#app footer .copyright div p {
+  font-size: 0.8rem;
+  color: #5f5f5f;
+}
+div#app footer .copyright div p span {
+  color: #a5a5a5;
+}
+div#app footer .copyright div i {
+  font-size: 1rem;
+  color: #a5a5a5;
+  margin: 0 10px;
+  cursor: pointer;
 }
