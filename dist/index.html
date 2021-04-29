@@ -164,18 +164,64 @@
 
         <section class="news">
           <div class="containerNews">
-            <p>
+            <p class="titleNews">
               Latest News
               <i class="borderI"></i>
             </p>
             <span class="info-news">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
             <div class="containerCardNews">
               <div class="cardNews" v-for='cardN in cardNews'>
-
+                <div class="innerCard">
+                  <div class="imgCard">
+                    <img :src="cardN.img">
+                  </div>
+                  <div class="infoCard">
+                    <p class="titleCard">{{cardN.title}}</p>
+                    <p class="dateCard">{{cardN.date}}</p>
+                    <p class="overview">{{cardN.overview}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="separator">
+                <i class="border-white top"></i>
+                <a href="#" class="viewArt"> <span>VIEW ALL ARTICLES</span> </a>
+                <i class="border-white center"></i>
               </div>
             </div>
           </div>
         </section>
+
+        <section class="trusted">
+          <div class="containerTrusted">
+            <p class="titleTrusted">
+              Trusted Partners
+              <i class="borderI"></i>
+            </p>
+            <span class="info-trusted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+            <div class="slider">
+              <div class="img" v-for='logo in sliderLoghi'>
+                <img :src="logo">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="inspiringSpaces">
+          <div class="containerSpaces">
+            <div class="left">
+              <p class="titleSpaces">
+                Building Inspiring Spaces
+                <i class="borderI"></i>
+              </p>
+              <span class="info-spaces">Vivamus sed consectetur tellus dolor sit amet, consectetur adipiscing lorem elit sadip ipsum ets ficilis uns.</span>
+            </div>
+            <div class="right">
+              <a href="#"> <span>GET A FREE QUOTE</span> </a>
+              <p class="minP">Only takes a few seconds!</p>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <footer>

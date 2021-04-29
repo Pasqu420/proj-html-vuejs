@@ -59,7 +59,7 @@
   position: relative;
   margin-bottom: 40px;
 }
-// div border
+// i border
 @mixin border{
   position: absolute;
   bottom: 0;
@@ -113,6 +113,36 @@
   z-index: 100;
   border-radius: 50% 50% 0 0/100% 100% 0 0;
 }
+
+// div VIEW Project/Articles
+@mixin divView{
+  width: 1200px;
+  height: 40px;
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+@mixin borderView{
+  display: block;
+  width: 370px;
+  height: 1px;
+}
+@mixin aView{
+  width: 370px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  letter-spacing: 3px;
+  transition: background-color 0.4s;
+  &:hover{
+    background-color: #f9d03f;
+  }
+}
+////////
 
 // section work / news
 @mixin contCard{

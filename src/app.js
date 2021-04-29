@@ -175,6 +175,14 @@ function initVue() {
           type:'Architecture, Construction, Marketing',
           overview:'Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed'
         }
+      ],
+      sliderLoghi:
+      [
+        'images/home-logo1-219096700-320x202.png',
+        'images/home-logo2-219096700-320x202.png',
+        'images/home-logo9-219096700-320x202.png',
+        'images/home-logo10-219096700-320x202.png',
+        'images/home-logo11-219096700-320x202.png'
       ]
     },
     mounted(){
