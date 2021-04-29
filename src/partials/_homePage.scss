@@ -34,6 +34,9 @@ div#app{
             cursor: pointer;
             font-size: 0.9rem;
           }
+          .gold{
+            color:#fed455;
+          }
           li:first-child{
             color:#fed455;
           }
@@ -333,17 +336,20 @@ div#app{
           justify-content: space-between;
           padding-bottom: 50px;
           .column{
-            .padd{
-              padding: 30px;
-              border-radius: 100%;
-              font-size: 3.5rem;
-              color: #ffff;
-            }
-            .fa-users{
-              padding: 30px 25px;
-            }
-            .fa-lightbulb{
-              padding: 30px 40px;
+            .pulse{
+              .padd{
+                padding: 30px;
+                border-radius: 100%;
+                font-size: 3.5rem;
+                color: #ffff;
+                position: relative;
+              }
+              .fa-users{
+                padding: 30px 25px;
+              }
+              .fa-lightbulb{
+                padding: 30px 40px;
+              }
             }
             .titleVal{
               font-size: 1rem;
@@ -380,7 +386,8 @@ div#app{
       }
       .separator{
         @include separator;
-        transform: scale(1.1);
+        transform: scaleX(1.1);
+        height: 110px;
       }
       .separator.top{
         @include separatorTop;
@@ -388,7 +395,7 @@ div#app{
         background-color: #f5f5f5;
       }
       .titleSlider{
-        height: 60px;
+        height: 70px;
         font-size: 2rem;
         font-weight: 300;
         color :#ffff;
@@ -411,15 +418,16 @@ div#app{
         left: 50%;
         transform: translate(- 50%, - 50%);
         .imgSlider{
+          margin: 20px 0;
           img{
-            width: 120px;
+            width: 150px;
             height: auto;
             border-radius: 100%;
           }
         }
         .overview{
           width: 80%;
-          margin: 40px 0 20px 0;
+          margin-bottom:20px;
           color: #ffff;
           font-size: 1.2rem;
           font-weight: 500;
@@ -486,9 +494,23 @@ div#app{
             background-color: #ffff;
             .innerCard{
               .imgCard{
+                position: relative;
+                &:hover{
+                  .overlay{
+                    @include activeHover;
+                  }
+                }
                 img{
                   width: 100%;
                   height: auto;
+                }
+                .overlay{
+                  @include back;
+                  @include hoverRotate;
+                  p{
+                    width: 70%;
+                    text-align: center;
+                  }
                 }
               }
               .infoCard{

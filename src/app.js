@@ -237,6 +237,9 @@ function initVue() {
       changeCard: function (item) {
         item.hover = !item.hover;
       },
+      hoverLinkNav:function (item){
+        item.menu = !item.menu;
+      },
       animationNumber: function () {
         for (let i = 0; i < this.counter.length; i++) {
           const elem = this.counter[i];

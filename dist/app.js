@@ -193,6 +193,9 @@ function initVue() {
       changeCard: function changeCard(item) {
         item.hover = !item.hover;
       },
+      hoverLinkNav: function hoverLinkNav(item) {
+        item.menu = !item.menu;
+      },
       animationNumber: function animationNumber() {
         for (var i = 0; i < this.counter.length; i++) {
           var elem = this.counter[i];

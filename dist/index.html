@@ -27,7 +27,10 @@
           </div>
           <nav>
             <ul>
-              <li v-for='item in navBar'>{{item.nav}}</li>
+              <li v-for='item in navBar' @mouseenter='hoverLinkNav(item)'
+                @mouseleave='hoverLinkNav(item)' :class='item.menu?"":"gold"'>
+                {{item.nav}}
+              </li>
             </ul>
             <a href="#"> <span href="#">GET QUOTE</span> </a>
           </nav>
@@ -126,7 +129,9 @@
             <span class="info-values">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
             <div class="containerColumn">
               <div class="column" v-for='elem in cardValues'>
-                <i :class="elem.icon" class="padd" :style="{'background-color':elem.color}"></i>
+                <div class="pulse">
+                  <i :class="elem.icon" class="padd" :style="{'background-color':elem.color}"></i>
+                </div>
                 <p class="titleVal">
                   {{elem.title}}
                   <i class="border-min"></i>
@@ -173,6 +178,14 @@
                 <div class="innerCard">
                   <div class="imgCard">
                     <img :src="cardN.img">
+                    <div class="overlay">
+                      <div class="icon">
+                        <i class="fas fa-link"></i>
+                        <i class="fas fa-search"></i>
+                      </div>
+                      <p>{{cardN.title}}</p>
+                      <span>{{cardN.type}}</span>
+                    </div>
                   </div>
                   <div class="infoCard">
                     <p class="titleCard">{{cardN.title}}</p>
