@@ -928,7 +928,7 @@ div#app footer .containerFooter {
 div#app footer .containerFooter .card {
   width: 393px;
   height: 330px;
-  background-color: green;
+  border: 1px solid #ffff;
 }
 div#app footer .containerFooter .card_4 {
   background-color: #1b1b1b;
