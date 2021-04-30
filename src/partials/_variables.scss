@@ -16,7 +16,7 @@ $orangethird:#fed03d;
   letter-spacing: 3px;
   transition: background-color 0.4s;
   span{
-    color: #ffff;
+    color: $white;
   }
   &:hover{
     background-color: $orangePrimary;
@@ -38,7 +38,7 @@ $orangethird:#fed03d;
   &:hover{
     background-color: #31312f;
     span{
-      color: #ffff;
+      color: $white;
     }
   }
 }
@@ -104,7 +104,7 @@ $orangethird:#fed03d;
 @mixin separator{
   width: 100%;
   height: 140px;
-  background-color: #ffff;
+  background-color: $white;
   transform: scaleX(1.3);
 }
 @mixin separatorTop{
@@ -184,7 +184,7 @@ $orangethird:#fed03d;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #ffff;
+  color: $white;
   .icon{
     width: 110px;
     display: flex;
@@ -194,7 +194,7 @@ $orangethird:#fed03d;
       padding: 17px;
       border-radius: 100%;
       font-size: 1rem;
-      background-color: #ffff;
+      background-color: $white;
       color:$orangeSecond;
     }
   }

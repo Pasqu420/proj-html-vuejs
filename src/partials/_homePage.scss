@@ -72,7 +72,7 @@ div#app{
       }
       .textJumbotro{
         position: absolute;
-        top:50%;
+        top:40%;
         left: 50%;
         transform: translate(- 50%, - 50%);
         text-align: center;
@@ -146,8 +146,7 @@ div#app{
           @include spanStyle;
         }
         .container-cardSpecialist{
-          display: flex;
-          justify-content: space-between;
+          @include d-flex;
           .cardSpecialist{
             width: 380px;
             height: auto;
@@ -591,8 +590,9 @@ div#app{
       width: 100%;
       height: 500px;
       background-image: url(images/about-call-to-action-57862405.jpg);
+      background-attachment: fixed;
       background-repeat: no-repeat;
-      background-position: center bottom;
+      background-position: center;
       background-size: cover;
       .containerSpaces{
         width: 60%;

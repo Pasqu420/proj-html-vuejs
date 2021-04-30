@@ -186,7 +186,7 @@ function initVue() {
       copyrightIcon: ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-youtube', 'fab fa-instagram']
     },
     mounted: function mounted() {
-      this.timing = setInterval(this.animationNumber, 0.01);
+      this.timing = setInterval(this.animationNumber, 1);
       setInterval(this.mySlider, 4000);
     },
     methods: {

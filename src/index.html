@@ -160,7 +160,13 @@
               <p class="ml">{{slider[indSlider].type}}</p>
             </span>
             <ul>
-              <li v-for='circle in 2'><i class="far fa-circle" :class="circle -1 ==  indSlider? 'active':''"></i></li>
+              <li v-for='circle in 2'>
+                <i class="far fa-circle"
+                  :class="circle -1 ==  indSlider? 'active':''"
+                  @click='indSlider = circle - 1'
+                  >
+                </i>
+              </li>
             </ul>
           </div>
           <div class="separator bottom"></div>

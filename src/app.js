@@ -230,7 +230,7 @@ function initVue() {
       ]
     },
     mounted(){
-      this.timing = setInterval(this.animationNumber,0.01);
+      this.timing = setInterval(this.animationNumber,1);
       setInterval(this.mySlider,4000)
     },
     methods:{
